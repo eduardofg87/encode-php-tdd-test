@@ -1,12 +1,15 @@
 <?php
 
-namespace Base;
+namespace App\Test;
+
+use App\SubstitutionEncodingAlgorithm;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class SubstitutionEncodingAlgorithmTest
  * @package Base
  */
-class SubstitutionEncodingAlgorithmTest extends \PHPUnit_Framework_TestCase
+class SubstitutionEncodingAlgorithmTest extends TestCase
 {
     /**
      * @dataProvider getTexts
@@ -16,7 +19,7 @@ class SubstitutionEncodingAlgorithmTest extends \PHPUnit_Framework_TestCase
      */
     public function testValidEncoding($substitutions, $text, $encoded)
     {
-        $algorithm = new \SubstitutionEncodingAlgorithm($substitutions);
+        $algorithm = new SubstitutionEncodingAlgorithm($substitutions);
 
         $this->assertEquals($encoded, $algorithm->encode($text));
     }

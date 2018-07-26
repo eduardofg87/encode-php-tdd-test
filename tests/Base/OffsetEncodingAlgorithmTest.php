@@ -1,12 +1,15 @@
 <?php
 
-namespace Base;
+namespace App\Test;
+
+use App\OffsetEncodingAlgorithm;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class OffsetEncodingAlgorithmTest
- * @package Base
+ * @package App\Test
  */
-class OffsetEncodingAlgorithmTest extends \PHPUnit_Framework_TestCase
+class OffsetEncodingAlgorithmTest extends TestCase
 {
     /**
      * @dataProvider getTexts
@@ -16,7 +19,7 @@ class OffsetEncodingAlgorithmTest extends \PHPUnit_Framework_TestCase
      */
     public function testValidEncoding($offset, $text, $encoded)
     {
-        $algorithm = new \OffsetEncodingAlgorithm($offset);
+        $algorithm = new OffsetEncodingAlgorithm($offset);
 
         $this->assertEquals($encoded, $algorithm->encode($text));
     }

@@ -1,0 +1,10 @@
+/vendor
+tests/codeCoverage
+
+# IDE
+## Eclipse
+.buildpath
+.project
+.settings
+## PHPStorm
+.idea/

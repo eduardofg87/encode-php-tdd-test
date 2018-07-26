@@ -1,12 +1,17 @@
 <?php
 
-namespace Base;
+namespace App\Test;
+
+use App\CompositeEncodingAlgorithm;
+use App\OffsetEncodingAlgorithm;
+use App\SubstitutionEncodingAlgorithm;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class CompositeEncodingAlgorithmTest
  * @package Base
  */
-class CompositeOffsetSubstitutionEncodingAlgorithmTest extends \PHPUnit_Framework_TestCase
+class CompositeOffsetSubstitutionEncodingAlgorithmTest extends TestCase
 {
     /**
      * @dataProvider getTexts
@@ -16,10 +21,10 @@ class CompositeOffsetSubstitutionEncodingAlgorithmTest extends \PHPUnit_Framewor
      */
     public function testValidEncoding($offset, $text, $encoded)
     {
-        $algorithm = new \CompositeEncodingAlgorithm();
+        $algorithm = new CompositeEncodingAlgorithm();
 
-        $algorithm->add(new \OffsetEncodingAlgorithm($offset));
-        $algorithm->add(new \SubstitutionEncodingAlgorithm(array('ga', 'de', 'ry', 'po', 'lu', 'ki')));
+        $algorithm->add(new OffsetEncodingAlgorithm($offset));
+        $algorithm->add(new SubstitutionEncodingAlgorithm(array('ga', 'de', 'ry', 'po', 'lu', 'ki')));
 
         $this->assertEquals($encoded, $algorithm->encode($text));
     }
@@ -47,10 +52,10 @@ class CompositeOffsetSubstitutionEncodingAlgorithmTest extends \PHPUnit_Framewor
      */
     public function testReverseOrder($offset, $text, $encoded)
     {
-        $algorithm = new \CompositeEncodingAlgorithm();
+        $algorithm = new CompositeEncodingAlgorithm();
 
-        $algorithm->add(new \SubstitutionEncodingAlgorithm(array('ga', 'de', 'ry', 'po', 'lu', 'ki')));
-        $algorithm->add(new \OffsetEncodingAlgorithm($offset));
+        $algorithm->add(new SubstitutionEncodingAlgorithm(array('ga', 'de', 'ry', 'po', 'lu', 'ki')));
+        $algorithm->add(new OffsetEncodingAlgorithm($offset));
 
         $this->assertEquals($encoded, $algorithm->encode($text));
     }

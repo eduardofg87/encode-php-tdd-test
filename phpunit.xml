@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit bootstrap="tests/bootstrap.php" colors="true" >
+<phpunit bootstrap="vendor/autoload.php"
+         colors="true" >
     <logging>
-        <log type="junit" target="build/logs/TEST-junit.xml" logIncompleteSkipped="false" title="Test Results"/>
+        <log type="junit" target="tests/codeCoverage/logs/TEST-junit.xml"
+             logIncompleteSkipped="false" title="Test Results"/>
+        <log type="coverage-html" target="tests/codeCoverage/html"
+             lowUpperBound="50" highLowerBound="80" charset="UTF-8"/>
     </logging>
     <testsuites>
         <testsuite name="base">
             <directory>tests/Base</directory>
         </testsuite>
     </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">./app</directory>
+        </whitelist>
+    </filter>
 </phpunit>
