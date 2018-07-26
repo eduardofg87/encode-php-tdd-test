@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="base" tests="24" assertions="24" failures="21" errors="0" time="0.033969">
+    <testsuite name="Base\CompositeEncodingAlgorithmTest" file="C:\xampp\htdocs\encode-php-tdd-test\tests\Base\CompositeEncodingAlgorithmTest.php" tests="1" assertions="1" failures="1" errors="0" time="0.028270">
+      <testcase name="testComposedAlgorithmsAreCalled" class="Base\CompositeEncodingAlgorithmTest" file="C:\xampp\htdocs\encode-php-tdd-test\tests\Base\CompositeEncodingAlgorithmTest.php" line="21" assertions="1" time="0.028270">
+        <failure type="PHPUnit_Framework_ExpectationFailedException">Base\CompositeEncodingAlgorithmTest::testComposedAlgorithmsAreCalled
+Failed asserting that two strings are identical.
+--- Expected
++++ Actual
+@@ @@
+-text encoded twice
++
+
+C:\xampp\htdocs\encode-php-tdd-test\tests\Base\CompositeEncodingAlgorithmTest.php:33
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:176
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:129
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="Base\CompositeOffsetSubstitutionEncodingAlgorithmTest" file="C:\xampp\htdocs\encode-php-tdd-test\tests\Base\CompositeOffsetSubstitutionEncodingAlgorithmTest.php" tests="9" assertions="9" failures="8" errors="0" time="0.002504">
+      <testsuite name="Base\CompositeOffsetSubstitutionEncodingAlgorithmTest::testValidEncoding" tests="6" assertions="6" failures="5" errors="0" time="0.001884">
+        <testcase name="testValidEncoding with data set #0" assertions="1" time="0.000986"/>
+        <testcase name="testValidEncoding with data set #1" assertions="1" time="0.000224">
+          <failure type="PHPUnit_Framework_ExpectationFailedException">Base\CompositeOffsetSubstitutionEncodingAlgorithmTest::testValidEncoding with data set #1 (0, 'abc', 'gbc')
+Failed asserting that two strings are equal.
+--- Expected
++++ Actual
+@@ @@
+-'gbc'
++''
+
+C:\xampp\htdocs\encode-php-tdd-test\tests\Base\CompositeOffsetSubstitutionEncodingAlgorithmTest.php:24
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:176
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:129
+</failure>
+        </testcase>
+        <testcase name="testValidEncoding with data set #2" assertions="1" time="0.000175">
+          <failure type="PHPUnit_Framework_ExpectationFailedException">Base\CompositeOffsetSubstitutionEncodingAlgorithmTest::testValidEncoding with data set #2 (1, 'abc', 'bce')
+Failed asserting that two strings are equal.
+--- Expected
++++ Actual
+@@ @@
+-'bce'
++''
+
+C:\xampp\htdocs\encode-php-tdd-test\tests\Base\CompositeOffsetSubstitutionEncodingAlgorithmTest.php:24
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:176
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:129
+</failure>
+        </testcase>
+        <testcase name="testValidEncoding with data set #3" assertions="1" time="0.000167">
+          <failure type="PHPUnit_Framework_ExpectationFailedException">Base\CompositeOffsetSubstitutionEncodingAlgorithmTest::testValidEncoding with data set #3 (1, 'abc def, ghi.', 'bce dfa, hkj.')
+Failed asserting that two strings are equal.
+--- Expected
++++ Actual
+@@ @@
+-'bce dfa, hkj.'
++''
+
+C:\xampp\htdocs\encode-php-tdd-test\tests\Base\CompositeOffsetSubstitutionEncodingAlgorithmTest.php:24
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:176
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:129
+</failure>
+        </testcase>
+        <testcase name="testValidEncoding with data set #4" assertions="1" time="0.000167">
+          <failure type="PHPUnit_Framework_ExpectationFailedException">Base\CompositeOffsetSubstitutionEncodingAlgorithmTest::testValidEncoding with data set #4 (26, 'abc def.', 'GBC EDF.')
+Failed asserting that two strings are equal.
+--- Expected
++++ Actual
+@@ @@
+-'GBC EDF.'
++''
+
+C:\xampp\htdocs\encode-php-tdd-test\tests\Base\CompositeOffsetSubstitutionEncodingAlgorithmTest.php:24
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:176
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:129
+</failure>
+        </testcase>
+        <testcase name="testValidEncoding with data set #5" assertions="1" time="0.000165">
+          <failure type="PHPUnit_Framework_ExpectationFailedException">Base\CompositeOffsetSubstitutionEncodingAlgorithmTest::testValidEncoding with data set #5 (26, 'ABC DEF.', 'gbc edf.')
+Failed asserting that two strings are equal.
+--- Expected
++++ Actual
+@@ @@
+-'gbc edf.'
++''
+
+C:\xampp\htdocs\encode-php-tdd-test\tests\Base\CompositeOffsetSubstitutionEncodingAlgorithmTest.php:24
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:176
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:129
+</failure>
+        </testcase>
+      </testsuite>
+      <testsuite name="Base\CompositeOffsetSubstitutionEncodingAlgorithmTest::testReverseOrder" tests="3" assertions="3" failures="3" errors="0" time="0.000620">
+        <testcase name="testReverseOrder with data set #0" assertions="1" time="0.000172">
+          <failure type="PHPUnit_Framework_ExpectationFailedException">Base\CompositeOffsetSubstitutionEncodingAlgorithmTest::testReverseOrder with data set #0 (0, 'abc', 'gbc')
+Failed asserting that two strings are equal.
+--- Expected
++++ Actual
+@@ @@
+-'gbc'
++''
+
+C:\xampp\htdocs\encode-php-tdd-test\tests\Base\CompositeOffsetSubstitutionEncodingAlgorithmTest.php:55
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:176
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:129
+</failure>
+        </testcase>
+        <testcase name="testReverseOrder with data set #1" assertions="1" time="0.000265">
+          <failure type="PHPUnit_Framework_ExpectationFailedException">Base\CompositeOffsetSubstitutionEncodingAlgorithmTest::testReverseOrder with data set #1 (1, 'abc', 'hcd')
+Failed asserting that two strings are equal.
+--- Expected
++++ Actual
+@@ @@
+-'hcd'
++''
+
+C:\xampp\htdocs\encode-php-tdd-test\tests\Base\CompositeOffsetSubstitutionEncodingAlgorithmTest.php:55
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:176
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:129
+</failure>
+        </testcase>
+        <testcase name="testReverseOrder with data set #2" assertions="1" time="0.000183">
+          <failure type="PHPUnit_Framework_ExpectationFailedException">Base\CompositeOffsetSubstitutionEncodingAlgorithmTest::testReverseOrder with data set #2 (1, 'abc def, ghi.', 'hcd feg, bil.')
+Failed asserting that two strings are equal.
+--- Expected
++++ Actual
+@@ @@
+-'hcd feg, bil.'
++''
+
+C:\xampp\htdocs\encode-php-tdd-test\tests\Base\CompositeOffsetSubstitutionEncodingAlgorithmTest.php:55
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:176
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:129
+</failure>
+        </testcase>
+      </testsuite>
+    </testsuite>
+    <testsuite name="Base\OffsetEncodingAlgorithmTest" file="C:\xampp\htdocs\encode-php-tdd-test\tests\Base\OffsetEncodingAlgorithmTest.php" tests="9" assertions="9" failures="7" errors="0" time="0.001936">
+      <testsuite name="Base\OffsetEncodingAlgorithmTest::testValidEncoding" tests="9" assertions="9" failures="7" errors="0" time="0.001936">
+        <testcase name="testValidEncoding with data set #0" assertions="1" time="0.000261"/>
+        <testcase name="testValidEncoding with data set #1" assertions="1" time="0.000134"/>
+        <testcase name="testValidEncoding with data set #2" assertions="1" time="0.000175">
+          <failure type="PHPUnit_Framework_ExpectationFailedException">Base\OffsetEncodingAlgorithmTest::testValidEncoding with data set #2 (1, 'a', 'b')
+Failed asserting that two strings are equal.
+--- Expected
++++ Actual
+@@ @@
+-'b'
++''
+
+C:\xampp\htdocs\encode-php-tdd-test\tests\Base\OffsetEncodingAlgorithmTest.php:21
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:176
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:129
+</failure>
+        </testcase>
+        <testcase name="testValidEncoding with data set #3" assertions="1" time="0.000199">
+          <failure type="PHPUnit_Framework_ExpectationFailedException">Base\OffsetEncodingAlgorithmTest::testValidEncoding with data set #3 (0, 'abc def.', 'abc def.')
+Failed asserting that two strings are equal.
+--- Expected
++++ Actual
+@@ @@
+-'abc def.'
++''
+
+C:\xampp\htdocs\encode-php-tdd-test\tests\Base\OffsetEncodingAlgorithmTest.php:21
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:176
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:129
+</failure>
+        </testcase>
+        <testcase name="testValidEncoding with data set #4" assertions="1" time="0.000173">
+          <failure type="PHPUnit_Framework_ExpectationFailedException">Base\OffsetEncodingAlgorithmTest::testValidEncoding with data set #4 (1, 'abc def.', 'bcd efg.')
+Failed asserting that two strings are equal.
+--- Expected
++++ Actual
+@@ @@
+-'bcd efg.'
++''
+
+C:\xampp\htdocs\encode-php-tdd-test\tests\Base\OffsetEncodingAlgorithmTest.php:21
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:176
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:129
+</failure>
+        </testcase>
+        <testcase name="testValidEncoding with data set #5" assertions="1" time="0.000258">
+          <failure type="PHPUnit_Framework_ExpectationFailedException">Base\OffsetEncodingAlgorithmTest::testValidEncoding with data set #5 (2, 'z', 'B')
+Failed asserting that two strings are equal.
+--- Expected
++++ Actual
+@@ @@
+-'B'
++''
+
+C:\xampp\htdocs\encode-php-tdd-test\tests\Base\OffsetEncodingAlgorithmTest.php:21
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:176
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:129
+</failure>
+        </testcase>
+        <testcase name="testValidEncoding with data set #6" assertions="1" time="0.000194">
+          <failure type="PHPUnit_Framework_ExpectationFailedException">Base\OffsetEncodingAlgorithmTest::testValidEncoding with data set #6 (1, 'Z', 'a')
+Failed asserting that two strings are equal.
+--- Expected
++++ Actual
+@@ @@
+-'a'
++''
+
+C:\xampp\htdocs\encode-php-tdd-test\tests\Base\OffsetEncodingAlgorithmTest.php:21
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:176
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:129
+</failure>
+        </testcase>
+        <testcase name="testValidEncoding with data set #7" assertions="1" time="0.000354">
+          <failure type="PHPUnit_Framework_ExpectationFailedException">Base\OffsetEncodingAlgorithmTest::testValidEncoding with data set #7 (26, 'abc def.', 'ABC DEF.')
+Failed asserting that two strings are equal.
+--- Expected
++++ Actual
+@@ @@
+-'ABC DEF.'
++''
+
+C:\xampp\htdocs\encode-php-tdd-test\tests\Base\OffsetEncodingAlgorithmTest.php:21
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:176
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:129
+</failure>
+        </testcase>
+        <testcase name="testValidEncoding with data set #8" assertions="1" time="0.000188">
+          <failure type="PHPUnit_Framework_ExpectationFailedException">Base\OffsetEncodingAlgorithmTest::testValidEncoding with data set #8 (26, 'ABC DEF.', 'abc def.')
+Failed asserting that two strings are equal.
+--- Expected
++++ Actual
+@@ @@
+-'abc def.'
++''
+
+C:\xampp\htdocs\encode-php-tdd-test\tests\Base\OffsetEncodingAlgorithmTest.php:21
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:176
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:129
+</failure>
+        </testcase>
+      </testsuite>
+    </testsuite>
+    <testsuite name="Base\SubstitutionEncodingAlgorithmTest" file="C:\xampp\htdocs\encode-php-tdd-test\tests\Base\SubstitutionEncodingAlgorithmTest.php" tests="5" assertions="5" failures="5" errors="0" time="0.001259">
+      <testsuite name="Base\SubstitutionEncodingAlgorithmTest::testValidEncoding" tests="5" assertions="5" failures="5" errors="0" time="0.001259">
+        <testcase name="testValidEncoding with data set #0" assertions="1" time="0.000184">
+          <failure type="PHPUnit_Framework_ExpectationFailedException">Base\SubstitutionEncodingAlgorithmTest::testValidEncoding with data set #0 (array('ab'), 'aabbcc', 'bbaacc')
+Failed asserting that two strings are equal.
+--- Expected
++++ Actual
+@@ @@
+-'bbaacc'
++''
+
+C:\xampp\htdocs\encode-php-tdd-test\tests\Base\SubstitutionEncodingAlgorithmTest.php:21
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:176
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:129
+</failure>
+        </testcase>
+        <testcase name="testValidEncoding with data set #1" assertions="1" time="0.000168">
+          <failure type="PHPUnit_Framework_ExpectationFailedException">Base\SubstitutionEncodingAlgorithmTest::testValidEncoding with data set #1 (array('ab', 'cd'), 'adam', 'bcbm')
+Failed asserting that two strings are equal.
+--- Expected
++++ Actual
+@@ @@
+-'bcbm'
++''
+
+C:\xampp\htdocs\encode-php-tdd-test\tests\Base\SubstitutionEncodingAlgorithmTest.php:21
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:176
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:129
+</failure>
+        </testcase>
+        <testcase name="testValidEncoding with data set #2" assertions="1" time="0.000172">
+          <failure type="PHPUnit_Framework_ExpectationFailedException">Base\SubstitutionEncodingAlgorithmTest::testValidEncoding with data set #2 (array('ga', 'de', 'ry', 'po', 'lu', 'ki'), 'lorem ipsum dolor', 'upydm koslm epupy')
+Failed asserting that two strings are equal.
+--- Expected
++++ Actual
+@@ @@
+-'upydm koslm epupy'
++''
+
+C:\xampp\htdocs\encode-php-tdd-test\tests\Base\SubstitutionEncodingAlgorithmTest.php:21
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:176
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:129
+</failure>
+        </testcase>
+        <testcase name="testValidEncoding with data set #3" assertions="1" time="0.000399">
+          <failure type="PHPUnit_Framework_ExpectationFailedException">Base\SubstitutionEncodingAlgorithmTest::testValidEncoding with data set #3 (array('ga', 'de', 'ry', 'po', 'lu', 'ki'), 'libero euismod bibendum', 'ukbdyp dlksmpe bkbdnelm')
+Failed asserting that two strings are equal.
+--- Expected
++++ Actual
+@@ @@
+-'ukbdyp dlksmpe bkbdnelm'
++''
+
+C:\xampp\htdocs\encode-php-tdd-test\tests\Base\SubstitutionEncodingAlgorithmTest.php:21
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:176
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:129
+</failure>
+        </testcase>
+        <testcase name="testValidEncoding with data set #4" assertions="1" time="0.000336">
+          <failure type="PHPUnit_Framework_ExpectationFailedException">Base\SubstitutionEncodingAlgorithmTest::testValidEncoding with data set #4 (array('ga', 'de', 'ry', 'po', 'lu', 'ki'), 'LIBERO EUISMOD BIBENDUM', 'UKBDYP DLKSMPE BKBDNELM')
+Failed asserting that two strings are equal.
+--- Expected
++++ Actual
+@@ @@
+-'UKBDYP DLKSMPE BKBDNELM'
++''
+
+C:\xampp\htdocs\encode-php-tdd-test\tests\Base\SubstitutionEncodingAlgorithmTest.php:21
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:176
+C:\xampp\php\pear\PHPUnit\TextUI\Command.php:129
+</failure>
+        </testcase>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>

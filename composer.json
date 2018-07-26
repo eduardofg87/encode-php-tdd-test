@@ -1,0 +1,14 @@
+{
+    "name": "eduardofg87/encode-php-tdd-test",
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-0": {
+            "": "app/"
+        }
+    },
+    "require": {
+        "php": ">=7.1.0",
+        "phpunit/phpunit": "4.6",
+        "phpspec/prophecy": "^1.5"
+    }
+}
