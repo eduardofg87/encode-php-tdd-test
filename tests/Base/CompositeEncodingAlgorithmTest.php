@@ -1,12 +1,15 @@
 <?php
 
-namespace Base;
+namespace App\Test;
+
+use App\CompositeEncodingAlgorithm;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class CompositeEncodingAlgorithmTest
  * @package verify_pack
  */
-class CompositeEncodingAlgorithmTest extends \PHPUnit_Framework_TestCase
+class CompositeEncodingAlgorithmTest extends TestCase
 {
     /**
      * @var \Prophecy\Prophet
@@ -26,7 +29,7 @@ class CompositeEncodingAlgorithmTest extends \PHPUnit_Framework_TestCase
         $algorithmA->encode("plain text")->willReturn("encoded text");
         $algorithmB->encode("encoded text")->willReturn("text encoded twice");
 
-        $algorithm = new \CompositeEncodingAlgorithm();
+        $algorithm = new CompositeEncodingAlgorithm();
         $algorithm->add($algorithmA->reveal());
         $algorithm->add($algorithmB->reveal());
 
